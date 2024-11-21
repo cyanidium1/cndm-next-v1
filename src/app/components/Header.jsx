@@ -13,9 +13,12 @@ import {
 } from "@nextui-org/react";
 import { routes, footerLinks } from "@/utils/routes";
 import ContactModal from "./modals/ContactModal";
+import SelectLang from "./main/common/SelectLang";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const languages = [{ locale: "en" }, { locale: "ua" }];
+  const currentLocale = "en";
 
   return (
     <Navbar maxWidth="xl" shouldHideOnScroll onMenuOpenChange={setIsMenuOpen}>
@@ -41,7 +44,11 @@ export default function Header() {
         ))}
       </NavbarContent>
 
+      {/* Компонент перемикача мов */}
       <NavbarContent justify="end">
+        <NavbarItem>
+          <SelectLang />
+        </NavbarItem>
         <NavbarItem>
           <ContactModal />
         </NavbarItem>
