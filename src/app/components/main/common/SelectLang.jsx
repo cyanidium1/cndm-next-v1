@@ -22,7 +22,9 @@ const SelectLang = () => {
   const [isPending, setIsPending] = useState(false);
 
   useEffect(() => {
-    setCurrentLanguage(new Set([localeActive]));
+    if (currentLanguage.size === 0) {
+      setCurrentLanguage(new Set([localeActive || "en"]));
+    }
   }, [localeActive]);
 
   const onChange = (newValue) => {
