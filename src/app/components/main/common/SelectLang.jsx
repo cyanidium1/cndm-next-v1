@@ -9,8 +9,8 @@ const options = [
     label: "En",
   },
   {
-    value: "ua",
-    label: "Ua",
+    value: "uk",
+    label: "Uk",
   },
 ];
 
