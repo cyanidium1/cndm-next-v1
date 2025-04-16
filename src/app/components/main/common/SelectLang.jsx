@@ -1,4 +1,4 @@
-import { Select, SelectItem } from "@nextui-org/react";
+import { Select, SelectItem } from "@heroui/react";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";

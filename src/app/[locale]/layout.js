@@ -1,6 +1,7 @@
 import { Montserrat } from "next/font/google";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { Providers } from "../../../providers";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -26,9 +27,11 @@ export default async function RootLayout({ children, params }) {
     <html lang={locale} className={`${montserrat.className}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-          <Footer />
+          <Providers>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>

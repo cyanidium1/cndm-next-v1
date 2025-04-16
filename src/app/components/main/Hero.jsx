@@ -1,7 +1,7 @@
 "use client";
 
 import Container from "@/utils/Container";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import { useTranslations } from "next-intl";
 
 export default function Hero() {
